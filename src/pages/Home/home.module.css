@@ -1,0 +1,27 @@
+.container{
+    display: flex;
+    background-color: #fff;
+}
+
+.galleryContainer{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    column-gap: 1em;
+    row-gap: 1em;
+    overflow: auto;
+    background-color: azure;
+    padding: 1em 3em 1em 3em;
+    width: 100%;
+}
+
+
+@media (max-width: 480px) {
+    .container{
+        flex-direction: column;
+    }
+    .galleryContainer{
+        margin:0;
+        padding: 1em;
+    }
+}
+

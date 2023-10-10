@@ -1,0 +1,99 @@
+.ccontainer{
+    display:flex;
+    flex-direction:column;
+    /* display: grid;
+    grid-auto-flow: row; */
+    background-color: rgb(255, 255, 255);
+    border-radius: 14px;
+    padding: 1rem;
+    background-color: rgb(253, 255, 163);
+    box-shadow: 3px 5px rgba(44, 44, 44, 0.539);
+    max-height: 365px;
+    position: relative;
+}
+.form{
+    display:flex;
+    flex-direction:column;
+}
+
+.noteHeader{
+    margin-bottom:18px;
+    height:33px;
+    border-radius: 14px;
+    border: 0px solid;
+    outline: none;
+    padding: 1em;
+}
+
+.noteHeader::first-letter {
+    text-transform: capitalize;
+}
+
+.noteBody{
+    height: 165px;
+    max-height: 165px;
+    padding: 1em;
+    border-radius: 14px;
+    border: 0px solid;
+    outline: none;
+}
+
+.title{
+    font-size: 1.85em;
+}
+
+.header{
+    font-size:1.75em;
+    font-weight: 800;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+.configBtnItem{
+    width:15px;
+    margin-left: 25px;
+}
+
+.configBtnItem:hover{
+    cursor: pointer;
+}
+
+.configContainer{
+    display: flex;
+    justify-content: end;
+    margin-top: 10px;
+}
+
+.ccontainer > div:last-child{
+    bottom: 0;
+    position: absolute;
+    margin-bottom: 15px;
+    right: 0;
+    margin-right: 16px;
+}
+
+@media (max-width: 728px) {
+
+    .ccontainer{
+        height: 275px;
+    }
+}
+
+/* @media screen and (min-width: 40em) {
+    .ccontainer {
+       max-width: calc(33% -  1em);
+    }
+}
+
+@media (max-width: 814px) {
+    .ccontainer {
+        flex: 1 0 calc(105% -  1em);
+        width: 100%;
+    }
+}
+  */
+/* @media screen and (width: 40em) {
+    .ccontainer {
+        max-width: calc(15% - 1em);
+    }
+} */

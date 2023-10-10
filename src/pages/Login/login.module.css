@@ -1,0 +1,13 @@
+.container{
+    display: grid;
+    place-content: center;
+    height:100vh;
+}
+/* 
+@media (max-width: 480px) {
+    .container{
+        display: inline-block;
+        margin: auto;
+        padding: 0 10%;
+    }
+} */

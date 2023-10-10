@@ -1,0 +1,67 @@
+.container{
+    display:flex;
+    justify-content:end;
+    background-color: rgb(73, 161, 238);
+    padding: 1em 3em 1em 3em;
+    position: sticky; 
+    top: 0;
+    z-index: 999;
+}
+.addBtn{
+    max-width: 35px;
+    transition: 0.3s;
+}
+
+.navList{
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.name{
+    font-weight: 800;
+}
+
+.name:hover{
+    cursor: default !important;
+}
+
+.navList > *:hover{
+    cursor: pointer;
+}
+
+.addBtn:hover{
+    transition: 0.3s;
+    color: red;
+    opacity: 0.5;
+}
+
+.container > div:first-child {
+    margin-right: auto;
+    color: white;
+    display: flex;
+    align-items: center;
+    font-size: 17px;
+}
+
+
+
+
+/* @media (max-width: 480px) {
+    .container{
+        justify-content: center;
+        padding-right: 0; 
+    }
+} */
+
+@media (max-width: 768px) {
+    .container{
+        justify-content: center;
+        padding-right: 0; 
+        padding: 1em 3em 1em 3em;
+    }
+
+    .container > div:first-child {
+        display: none;
+    }
+    
+}

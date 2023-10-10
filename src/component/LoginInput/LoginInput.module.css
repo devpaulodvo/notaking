@@ -1,0 +1,35 @@
+.container{
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.formInput{
+    padding: 2em 4em 2em;
+    background-color: rgb(219, 253, 233);
+    border-radius: 12px;
+    box-shadow: 1px 1px rgba(101, 101, 101, 0.239); 
+}
+
+.fieldInput{
+    background-color: #fff;
+    border: 1px solid #b9b9b9;
+    height: 2.5em;
+    outline: none;
+    padding-left: 10px;
+}
+
+.loginButton{
+    color: #fff;
+    padding: 0.5em;
+    background-color: #3d87d1;
+}
+
+.loginButton:active{
+    background-color: #295989;
+}
+
+label{
+    color: #6e6e6e;
+}

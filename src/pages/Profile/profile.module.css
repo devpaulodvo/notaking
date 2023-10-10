@@ -1,0 +1,186 @@
+.container{
+    padding: 2rem 5rem 2rem 5rem;
+    gap:20px;
+}
+
+.container > h3 {
+    font-size:19px;
+    color: rgb(87, 87, 87);
+    font-weight: 400;
+}
+
+.container > h1{
+    font-size: 28px;
+    margin-bottom: 1em;
+}
+
+.title{
+    display: flex;
+    padding: 1em 5em 1em 5em;
+    flex-direction: column;
+}
+
+.title > h3{
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.title > h1 {
+    font-size: 34px;
+    font-weight: 700;
+}
+
+.bodyContainer{
+    /* display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: minmax(350px, auto);
+    gap: 20px; */
+    display: flex;
+    justify-content: center;
+    align-content: stretch;
+}
+
+.userProfileContainer{
+    background-color: rgb(255, 255, 255);
+    align-content: center;
+    align-items: center;
+    padding: 2em;
+    border-radius: 14px;
+    box-shadow: 2px 2px rgba(101, 101, 101, 0.539);
+    width: 30%;
+    min-width: 300px;
+}
+
+.userProfileContainer > img {
+    width: clamp(100px, 100%, 250px);
+    border-radius: 50%;
+    margin: 20px;
+}
+
+.userProfileContainer > hr{
+    /* border: 0.5px solid rgb(141, 141, 141); */
+    width: 100%;
+    display: block;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+}
+
+.accountContent{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    align-content: center;
+    align-items: center;
+    padding: 2em;
+    border-radius: 14px;
+    box-shadow: 2px 2px rgba(101, 101, 101, 0.539); 
+    min-width: 250px;
+    gap: 20px;
+}
+
+
+.h1{
+    font-size: 28px;
+    font-weight: 800;
+    color: rgb(73, 161, 238);
+    margin-bottom: 10px;
+}
+
+.skillContent{
+    width: 100%;
+}
+
+.skillSet{
+    display: grid;
+    border: 1px solid rgb(213, 213, 213);
+    padding: 0.5em;
+    background-color: rgb(255, 239, 210);;
+    border-radius: 8px;
+}
+
+
+.skillLevel{
+    margin: 0.2rem 0;
+    flex-direction: row;
+    align-items: center;
+}
+
+.skillBar{
+    display: flex;
+    gap: 10px;
+}
+
+.skillName{
+    width: 100%;
+    align-items: center;
+}
+
+.fill {
+    background: #ff663f;
+}
+
+.skillz{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.dot {
+    opacity: 100;
+    margin: 0.2rem 0.2rem;
+    width: 12px;
+    height: 12px;
+    border-radius: 100%;
+    border: 0.1rem #ff9e00 solid;
+}
+
+.a1 {
+    background: #ff6d00;
+    border: 0.1rem #ff6d00 solid;
+  }
+
+.a2 {
+    background: #ff7900;
+    border: 0.1rem #ff7900 solid;
+  }
+
+.a3 {
+    background: #ff8500;
+    border: 0.1rem #ff8500 solid;
+  }
+
+.a4 {
+    background: #ff9100;
+    border: 0.1rem #ff9100 solid;
+}
+
+.a5 {
+    background: #ff9e00;
+    border: 0.1rem #ff9e00 solid;
+}
+
+
+
+@media screen and (max-width: 728px) {
+    .container{
+        flex-direction: column;
+    }
+
+    .container{
+        padding-inline: 2rem;
+    }
+
+    .userProfileContainer{
+        width: 100%;
+        min-width: 250px;
+    }
+
+    .title {
+        padding: 0em 2em 0em 2em;
+    }
+}
+
