@@ -4,6 +4,7 @@ import styles from './App.module.css';
 import Home from './pages/Home';
 import Profile from './pages/Profile';
 import { Route, useRoutes, Routes } from 'react-router-dom';
+import axios from "axios";
 
 function App() {
   const element = <Login/>;

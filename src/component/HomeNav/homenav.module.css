@@ -1,67 +1,92 @@
-.container{
-    display:flex;
-    justify-content:end;
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    padding: 0 2rem;
     background-color: rgb(73, 161, 238);
-    padding: 1em 3em 1em 3em;
-    position: sticky; 
-    top: 0;
-    z-index: 999;
-}
-.addBtn{
-    max-width: 35px;
-    transition: 0.3s;
+    color: white;
 }
 
-.navList{
-    padding-left: 1em;
-    padding-right: 1em;
+h3{
+    font-size:1.5rem;
+    font-weight: bold;
 }
 
-.name{
-    font-weight: 800;
+nav a{
+    margin: 0 2rem;
+    color: white;
+    text-decoration: none;
 }
 
-.name:hover{
-    cursor: default !important;
-}
-
-.navList > *:hover{
+nav a:hover{
     cursor: pointer;
 }
 
-.addBtn:hover{
-    transition: 0.3s;
-    color: red;
-    opacity: 0.5;
+header .navBtn{
+    padding: 5px;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    outline: none;
+    display: none;
+    opacity: 0;
+    font-size: 1.8rem; 
 }
 
-.container > div:first-child {
-    margin-right: auto;
-    color: white;
-    display: flex;
-    align-items: center;
-    font-size: 17px;
+.logo {
+    display: block;
+    justify-self: start;
 }
 
 
+@media only screen and (max-width: 1024px) {
+  
+    header{
+        justify-content:flex-end;
+        justify-content: space-between;
+    }
 
+    header .navBtn{
+        display: flex;
+        opacity: 1;
+    }
 
-/* @media (max-width: 480px) {
-    .container{
+    header nav{
+        position:fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         justify-content: center;
-        padding-right: 0; 
-    }
-} */
-
-@media (max-width: 768px) {
-    .container{
-        justify-content: center;
-        padding-right: 0; 
-        padding: 1em 3em 1em 3em;
+        gap: 1.5rem;
+        z-index: 10;
+        font-size: 1.8rem;
+        background-color: rgb(73, 161, 238);
+        transition: 0.8s;
+        transform: translateY(-100vh);
     }
 
-    .container > div:first-child {
-        display: none;
+    .responsiveNav {
+        transform: none;
     }
-    
+
+    .navClose{
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+    }
+
 }
+
+
+

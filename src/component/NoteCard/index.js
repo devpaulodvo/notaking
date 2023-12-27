@@ -2,25 +2,17 @@ import React from "react";
 import styles from "./notecard.module.css";
 import editBtn from "../../icons/edit.png";
 import deleteBtn from "../../icons/delete.png";
+import moment from 'moment';
 
-const NoteCard = () => {
+const NoteCard = ({note}) => {
     return(
         <div className={`${styles.ccontainer}`}>
             <h3 className={`${styles.header}`}>
-                Test Header
+                {note.title}
             </h3>
-            <p className={`${styles.date}`}>Date Created: 12/25/24</p>
+            <p className={`${styles.date}`}>{moment(note.updatedAt).format('MMMM Do YYYY')}</p>
             <p className={`${styles.body}`}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                Quisque et mollis tellus. Mauris ac enim vel purus tristique tincidunt vitae et mauris. 
-                Nullam sagittis porttitor dui, eget ullamcorper magna. Morbi eget lacus viverra, suscipit est sed, bibendum augue. 
-                Praesent sed mi sodales, congue arcu eget, blandit quam. Vivamus convallis dui et leo tincidunt, iaculis ullamcorper nisl dapibus. 
-                Integer faucibus vitae mi eget vulputate. Mauris vitae porttitor neque.
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                Quisque et mollis tellus. Mauris ac enim vel purus tristique tincidunt vitae et mauris. 
-                Nullam sagittis porttitor dui, eget ullamcorper magna. Morbi eget lacus viverra, suscipit est sed, bibendum augue. 
-                Praesent sed mi sodales, congue arcu eget, blandit quam. Vivamus convallis dui et leo tincidunt, iaculis ullamcorper nisl dapibus. 
-                Integer faucibus vitae mi eget vulputate. Mauris vitae porttitor neque.
+                {note.postbody}
             </p>
             <div className={`${styles.configContainer}`}>
                 <img src={editBtn} alt="edit" className={`${styles.configBtnItem}`}/>
