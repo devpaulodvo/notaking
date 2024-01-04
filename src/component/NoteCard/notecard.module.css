@@ -4,9 +4,10 @@
     background-color: rgb(255, 255, 255);
     border-radius: 14px;
     padding: 1rem;
-    background-color: rgb(253, 255, 163);
-    box-shadow: 3px 5px rgba(44, 44, 44, 0.539);
+    background-color: #B4D4FF;
+    box-shadow: 1px 3px 8px rgba(44, 44, 44, 0.539);
     max-height: 365px;
+    cursor: pointer;
 }
 
 .body{
@@ -14,6 +15,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
     margin-top: 15px;
+    font-size: 1.2em;
 }
 
 .date{
@@ -23,7 +25,8 @@
 .header{
     font-size:1.75em;
     font-weight: 800;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .configBtnItem:hover{
@@ -31,8 +34,7 @@
 }
 
 .configBtnItem{
-    width:15px;
-    margin-left: 25px;
+    margin-left: 15px;
 }
 
 .configContainer{

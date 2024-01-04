@@ -1,16 +1,37 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { useDispatch } from 'react-redux';
-import { editTitle, editBody } from "../../app/slice/addnoteslice";
 import styles from "./home.module.css";
 import HomeNav from "../../component/HomeNav";
 import NoteCard from "../../component/NoteCard";
 import AddNoteCard from "../../component/AddNoteCard";
+import { useFormik } from 'formik';
 
 const Home = () =>{
-    const dispatch = useDispatch();
     const [noteList, setNotelist] = useState([]);
     const [notePost, setNotePost] = useState([]);
+
+    const validate = values => {
+        const errors = {};
+        if (!values.title) {
+          errors.title = 'Required';
+        } 
+        if (!values.postbody) {
+            errors.postbody = 'Required';
+          }
+        return errors;
+    }
+
+    const formik = useFormik({
+        initialValues: {
+          title: "",
+          postbody: "",
+        },
+        validate,
+        onSubmit: values => {
+        selectNotes({title: values.title, postbody: values.postbody});
+        formik.resetForm();
+        },
+    });
 
     useEffect(() =>{
         axios.get("http://localhost:3001/notes/getall").then((response) =>{
@@ -22,10 +43,9 @@ const Home = () =>{
 
             axios.post("http://localhost:3001/notes/getall", initialValues).then((response) =>{
                 setNotePost(initialValues);
-                dispatch(editTitle(""));
-                dispatch(editBody(""));
             })
         }
+
 
 
     return(

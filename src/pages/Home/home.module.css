@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=Titillium+Web:wght@400;600&display=swap');
 .container{
     display: flex;
     background-color: #fff;
+    font-family: "Titillium Web", sans-serif;
 }
 
 .galleryContainer{
@@ -14,10 +16,158 @@
     width: 100%;
 }
 
+.itemContainer{
+    background: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    height: 100dvh;
+    width: 100%;
+    top: 0;
+    display: grid;
+    place-items: center;
+}
+
+.ccontainer{
+    display:flex;
+    flex-direction:column;
+    /* display: grid;
+    grid-auto-flow: row; */
+    background-color: rgb(255, 255, 255);
+    border-radius: 14px;
+    padding: 1.5rem;
+    margin: 1.5rem;
+    background-color: #B4D4FF;
+    box-shadow: 1px 3px 8px rgba(44, 44, 44, 0.539);
+    position: relative;
+}
+
+.form{
+    display:flex;
+    flex-direction:column;
+}
+
+.noteHeader{
+    height:33px;
+    border-radius: 14px;
+    border: 0px solid;
+    outline: none;
+    padding: 1em;
+    width: 100%;
+    /* max-width: 20em; */
+}
+
+.noteHeaderError{
+    height:33px;
+    border-radius: 14px;
+    border: 1px rgb(221, 62, 62) solid;
+    outline: none;
+    padding: 1em;
+    background-color: #f9c2c2;
+}
+
+.noteHeaderError::placeholder {
+    color: red;
+    opacity: 1; /* Firefox */
+  }
+
+.noteHeader::first-letter {
+    text-transform: capitalize;
+}
+
+.noteBody{
+    height: 355px;
+    max-height: 355px;
+    margin-top:18px;
+    padding: 1em;
+    border-radius: 14px;
+    border: 0px solid;
+    outline: none;
+}
+
+.noteBodyError{
+    height: 165px;
+    max-height: 165px;
+    margin-top:18px;
+    padding: 1em;
+    border-radius: 14px;
+    border: 1px rgb(221, 62, 62) solid;
+    outline: none;
+    background-color: #f9c2c2;
+}
+
+.noteBodyError::placeholder {
+    color: red;
+    opacity: 1; /* Firefox */
+}
+
+.title{
+    font-size: 1.85em;
+}
+
+.header{
+    font-size:1.75em;
+    font-weight: 800;
+}
+
+
+.configBtnItem{
+    position:absolute;
+    bottom: 0;
+    right: 0;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+
+.configBtnItem:hover{
+    cursor: pointer;
+}
+
+.ccontainer > div:last-child{
+    bottom: 0;
+    position: absolute;
+    margin-bottom: 15px;
+    right: 0;
+    margin-right: 16px;
+}
+
+span{
+    margin:auto;
+}
+
+@media (min-width: 1024px) {
+    .ccontainer{
+        height: 475px;
+        width: 800px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .ccontainer{
+        height: 475px;
+        width:80%;
+    }
+}
+
+@media (max-height: 500px) {
+    .ccontainer{
+        height: 300px;
+        padding: 1.5rem;
+    }
+    .noteBody{
+        height: 180px;
+        margin-top:18px;
+        padding: 1em;
+        border-radius: 14px;
+        border: 0px solid;
+        outline: none;
+    }
+}
 
 @media (max-width: 480px) {
     .container{
         flex-direction: column;
+    }
+    .ccontainer{
+        height: 80%;
     }
     .galleryContainer{
         margin:0;

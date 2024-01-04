@@ -6,8 +6,8 @@
     background-color: rgb(255, 255, 255);
     border-radius: 14px;
     padding: 1rem;
-    background-color: rgb(253, 255, 163);
-    box-shadow: 3px 5px rgba(44, 44, 44, 0.539);
+    background-color: #B4D4FF;
+    box-shadow: 1px 3px 8px rgba(44, 44, 44, 0.539);
     max-height: 365px;
     position: relative;
 }
@@ -17,13 +17,26 @@
 }
 
 .noteHeader{
-    margin-bottom:18px;
     height:33px;
     border-radius: 14px;
     border: 0px solid;
     outline: none;
     padding: 1em;
 }
+
+.noteHeaderError{
+    height:33px;
+    border-radius: 14px;
+    border: 1px rgb(221, 62, 62) solid;
+    outline: none;
+    padding: 1em;
+    background-color: #f9c2c2;
+}
+
+.noteHeaderError::placeholder {
+    color: red;
+    opacity: 1; /* Firefox */
+  }
 
 .noteHeader::first-letter {
     text-transform: capitalize;
@@ -32,10 +45,27 @@
 .noteBody{
     height: 165px;
     max-height: 165px;
+    margin-top:18px;
     padding: 1em;
     border-radius: 14px;
     border: 0px solid;
     outline: none;
+}
+
+.noteBodyError{
+    height: 165px;
+    max-height: 165px;
+    margin-top:18px;
+    padding: 1em;
+    border-radius: 14px;
+    border: 1px rgb(221, 62, 62) solid;
+    outline: none;
+    background-color: #f9c2c2;
+}
+
+.noteBodyError::placeholder {
+    color: red;
+    opacity: 1; /* Firefox */
 }
 
 .title{
@@ -49,18 +79,15 @@
 
 
 .configBtnItem{
-    width:15px;
-    margin-left: 25px;
+    position:absolute;
+    bottom: 0;
+    right: 0;
+    margin-right: 20px;
+    margin-bottom: 10px;
 }
 
 .configBtnItem:hover{
     cursor: pointer;
-}
-
-.configContainer{
-    display: flex;
-    justify-content: end;
-    margin-top: 10px;
 }
 
 .ccontainer > div:last-child{
@@ -69,6 +96,10 @@
     margin-bottom: 15px;
     right: 0;
     margin-right: 16px;
+}
+
+span{
+    margin:auto;
 }
 
 @media (max-width: 728px) {

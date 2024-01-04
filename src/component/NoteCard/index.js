@@ -1,10 +1,29 @@
 import React from "react";
+import axios from "axios";
 import styles from "./notecard.module.css";
-import editBtn from "../../icons/edit.png";
-import deleteBtn from "../../icons/delete.png";
 import moment from 'moment';
+import { FaRegTrashAlt } from "react-icons/fa";
+import { FaPen } from "react-icons/fa";
+import { Route, useRoutes, Routes } from 'react-router-dom';
 
 const NoteCard = ({note}) => {
+    const onPen = () => {
+        console.log("Pen");
+    }
+
+    const onTrash = () => {
+        axios.post("http://localhost:3001/deletenotes/delete", note).then((response) =>{
+            console.log(response);
+        })
+        .catch(err => {
+            if(err.response){
+                console.log(err);
+            }
+        })
+    }
+
+    
+
     return(
         <div className={`${styles.ccontainer}`}>
             <h3 className={`${styles.header}`}>
@@ -15,8 +34,8 @@ const NoteCard = ({note}) => {
                 {note.postbody}
             </p>
             <div className={`${styles.configContainer}`}>
-                <img src={editBtn} alt="edit" className={`${styles.configBtnItem}`}/>
-                <img src={deleteBtn} alt="delete" className={`${styles.configBtnItem}`}/>
+                <FaPen onClick={onPen} className={`${styles.configBtnItem}`}/>
+                <FaRegTrashAlt onClick={onTrash} className={`${styles.configBtnItem}`}/>
             </div>
         </div>
     )

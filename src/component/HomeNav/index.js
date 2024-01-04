@@ -16,7 +16,7 @@ const HomeNav = () => {
     
     return(
         <header>
-            <h3>MyApp</h3>
+            <h3>My Portfolio</h3>
             <nav ref={navRef}>
                 <a onClick={()=>{ navigate("/home");}}>
                     Home
