@@ -1,10 +1,8 @@
 import React, { useRef } from "react";
 import styles from "./homenav.module.css";
-// import addBtn from "../../icons/plus.png";
-// import homeBtn from "../../icons/home.png";
-// import userBtn from "../../icons/user.png";
 import { useNavigate } from "react-router-dom";
 import {FaBars, FaTimes} from "react-icons/fa";
+import { NavLink } from "react-router-dom";
 
 const HomeNav = () => {
     const navigate = useNavigate();
@@ -18,12 +16,28 @@ const HomeNav = () => {
         <header>
             <h3>My Portfolio</h3>
             <nav ref={navRef}>
-                <a onClick={()=>{ navigate("/home");}}>
+                <NavLink 
+                // onClick={()=>{ navigate("/home");}}
+                to={"/home"}
+                className={({ isActive }) =>
+                    [
+                    isActive ? `${styles.active}` : "",
+                    ].join(" ")
+                }
+                >
                     Home
-                </a>
-                <a onClick={()=>{navigate("/profile");}}>
+                </NavLink>
+                <NavLink 
+                // onClick={()=>{navigate("/profile");}}
+                to={"/profile"}
+                className={({ isActive }) =>
+                    [
+                    isActive ? `${styles.active}` : "",
+                    ].join(" ")
+                }
+                >
                         Developer
-                </a>
+                </NavLink>
                 <button onClick={showNavBar} className={`${styles.navBtn} ${styles.navClose}`} >
                     <FaTimes/>
                 </button>

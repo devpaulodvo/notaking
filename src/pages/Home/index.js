@@ -5,10 +5,15 @@ import HomeNav from "../../component/HomeNav";
 import NoteCard from "../../component/NoteCard";
 import AddNoteCard from "../../component/AddNoteCard";
 import { useFormik } from 'formik';
+import { useSelector, useDispatch } from 'react-redux'
+import {addNotes} from '../../app/slice/notelistslice';
 
 const Home = () =>{
-    const [noteList, setNotelist] = useState([]);
     const [notePost, setNotePost] = useState([]);
+    const [mySwitch, setMySwitch] = useState(false);
+    const dispatch = useDispatch()
+    
+    const nl = useSelector((state)=>state.noteList.notes);
 
     const validate = values => {
         const errors = {};
@@ -32,12 +37,16 @@ const Home = () =>{
         formik.resetForm();
         },
     });
+    
+    const mySwe = () => {
+        setMySwitch(!mySwitch);
+    }
 
     useEffect(() =>{
         axios.get("http://localhost:3001/notes/getall").then((response) =>{
-            setNotelist(response.data);
+            dispatch(addNotes(response.data))
         })
-    },[notePost])
+    },[notePost, mySwitch])
 
         const selectNotes = (initialValues) =>{
 
@@ -46,8 +55,6 @@ const Home = () =>{
             })
         }
 
-
-
     return(
         <React.Fragment>
             <HomeNav/>
@@ -55,9 +62,9 @@ const Home = () =>{
                 <div className={`${styles.galleryContainer}`}>
                         <AddNoteCard selectNotes={selectNotes}/>
                         {
-                            noteList.map((note, index) =>{
-                                return <NoteCard key={index} note={note}/>
-                            })
+                        nl.map((note, index) =>{
+                            return <NoteCard mySwe={mySwe} key={index} note={note}/>
+                        })
                         }
                 </div>
             </div>

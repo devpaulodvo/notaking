@@ -3,18 +3,25 @@ import React from 'react';
 import styles from './App.module.css';
 import Home from './pages/Home';
 import Profile from './pages/Profile';
+import Note from './pages/Note';
+import EditNote from './component/EditNote'
 import { Route, useRoutes, Routes } from 'react-router-dom';
-import axios from "axios";
+import ViewNote from './component/ViewNote';
+// import axios from "axios";
 
 function App() {
   const element = <Login/>;
-  const Apps = () => 
-    useRoutes(['/login'].map(path => ({path, element})));
+  // const Apps = () => 
+  //   useRoutes(['/login'].map(path => ({path, element})));
   return (
       <Routes>
         <Route path="/" element={element}/>
         <Route path="/login" element={<Login/>}/>
         <Route path="/home" element={<Home/>}/>
+        <Route path="/note" element={<Note/>}>
+          <Route path="view/:postId" element={<ViewNote/>}/>
+          <Route path="edit/:postId" element={<EditNote/>}/>
+        </Route>
         <Route path="/profile" element={<Profile/>}/>
       </Routes>
   );

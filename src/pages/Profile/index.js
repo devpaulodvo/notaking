@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import styles from "./profile.module.css";
 import Me from "../../me.png";
 import HomeNav from "../../component/HomeNav";
@@ -20,7 +20,7 @@ const Profile = () => {
             <div className={`${styles.container} flex`}>
                 <div>
                     <div className={`${styles.userProfileContainer} flex items-center flex-col lg:flex-row`}>
-                        <img src={Me}/>
+                        <img src={Me} alt="Profile"/>
                         <div className={`flex flex-col md:mt-4`}>
                             <h1 className={`text-2xl font-semibold`}>Paulo Dionisio</h1>
                             <p className={`text-xl font-semibold`}>Software Developer</p>
@@ -56,7 +56,7 @@ const Profile = () => {
                                 let skill = [];
                                 for(let i = 0; i < 5; i++){
                                     if(i < val.points){
-                                        skill.push(<div key={i} className={`${styles.dot} ${i==0&&styles.a1} ${i==1&&styles.a2} ${i==2&&styles.a3} ${i==3&&styles.a4} ${i==4&&styles.a5}`}/>);
+                                        skill.push(<div key={i} className={`${styles.dot} ${i===0&&styles.a1} ${i===1&&styles.a2} ${i===2&&styles.a3} ${i===3&&styles.a4} ${i===4&&styles.a5}`}/>);
                                     }
                                     else{
                                         skill.push(<div key={i} className={`${styles.dot}`}/>);
@@ -80,7 +80,7 @@ const Profile = () => {
 
                         <div className={`${styles.bio}`}>
                             <h1 className={`${styles.h1}`}>Connect with Me</h1>
-                            <p>Feel free to connect with me on <a href="https://www.linkedin.com/in/devpaulodvo/" target="_blank" className={`font-bold text-cyan-600`}>LinkedIn</a>. 
+                            <p>Feel free to connect with me on <a href="https://www.linkedin.com/in/devpaulodvo/" target="_blank" rel="noreferrer" className={`font-bold text-cyan-600`}>LinkedIn</a>. 
                                 I am always open to discussing new opportunities, collaborating on interesting projects, 
                                 or simply engaging in conversations about technology and coding.</p>
                         </div> 
