@@ -1,0 +1,66 @@
+.container{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 2em 2em 3em 2em;
+    width: 660px;
+    max-width: 660px;
+    align-items: center;
+    border-radius:12px;
+    background-color: rgb(229, 229, 229);
+    position: relative;
+}
+
+.title{
+    font-size: 3em;
+    font-weight: bold;
+   line-height: 1;
+}
+
+.date{
+    font-size: 1em;
+    margin-top: 0.5em;
+}
+
+.hori{
+    background-color: black;
+    height: 2px;
+    width: 100%;
+    margin: 1em;
+    
+}
+
+.noteBody{
+    /* margin-top: 20px; */
+    font-size: 1.25em;
+    align-self: start;
+}
+
+.noteBody::first-letter{
+    font-weight: 500;
+    font-size: 1.25em;
+}
+
+.trash{
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 0em 1.5em 1em 0em;
+}
+
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    .title{
+        font-size: 2em;
+    }
+    .noteBody{
+        /* margin-top: 20px; */
+        font-size: 1em;
+    }
+    .date{
+        font-size: 0.75em;
+    }
+  }
+  

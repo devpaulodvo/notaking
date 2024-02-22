@@ -1,14 +1,13 @@
 .ccontainer{
     display:flex;
     flex-direction:column;
-    /* display: grid;
-    grid-auto-flow: row; */
     background-color: rgb(255, 255, 255);
     border-radius: 14px;
     padding: 1rem;
     background-color: #B4D4FF;
     box-shadow: 1px 3px 8px rgba(44, 44, 44, 0.539);
     max-height: 365px;
+    height: 275.39px;
     position: relative;
 }
 .form{
@@ -17,7 +16,7 @@
 }
 
 .noteHeader{
-    height:33px;
+    height: 33px;
     border-radius: 14px;
     border: 0px solid;
     outline: none;
@@ -77,6 +76,23 @@
     font-weight: 800;
 }
 
+.noteLength{
+    position:absolute;
+    bottom: 0;
+    left: 0;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+
+.titleLenght{
+    position: absolute;
+    top: 1;
+    right: 0;
+    margin-right: 27px;
+    margin-top: 5px;
+    
+}
 
 .configBtnItem{
     position:absolute;

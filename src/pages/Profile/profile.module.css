@@ -5,11 +5,11 @@
     width: 55%;
     margin: 0 auto;
     font-family: "Titillium Web", sans-serif;
+    color: #383633;
 }
 
 .container > h3 {
     font-size:19px;
-    color: rgb(87, 87, 87);
     font-weight: 400;
 }
 
@@ -24,6 +24,7 @@
     flex-direction: column;
     width: 55%;
     margin: auto;
+    color: #383633;
 }
 
 .title > h3{
@@ -43,6 +44,7 @@
     grid-template-rows: minmax(350px, auto);
     gap: 20px; */
     display: flex;
+    color: #383633;
     justify-content: center;
     align-content: stretch;
 }

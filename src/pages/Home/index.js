@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import styles from "./home.module.css";
-import HomeNav from "../../component/HomeNav";
 import NoteCard from "../../component/NoteCard";
 import AddNoteCard from "../../component/AddNoteCard";
 import { useFormik } from 'formik';
@@ -57,7 +56,6 @@ const Home = () =>{
 
     return(
         <React.Fragment>
-            <HomeNav/>
             <div className={`${styles.container}`}>
                 <div className={`${styles.galleryContainer}`}>
                         <AddNoteCard selectNotes={selectNotes}/>

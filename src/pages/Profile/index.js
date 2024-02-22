@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "./profile.module.css";
 import Me from "../../me.png";
-import HomeNav from "../../component/HomeNav";
 
 const Profile = () => {
 
@@ -12,7 +11,6 @@ const Profile = () => {
     }
     return(
         <React.Fragment>
-            <HomeNav/>
             <div className={`${styles.title}`}>
                 <h3>Overview</h3>
                 <h1>Developer's Profile</h1>

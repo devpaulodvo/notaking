@@ -1,0 +1,17 @@
+.container {
+    height: 100dvh;   
+    display: flex;
+    justify-content: center;
+    color: #383633;
+}
+
+.content {
+    margin: auto;
+    text-align: center;
+}
+
+.content > h1 {
+    margin-bottom: 1em;
+    font-size:2em;
+    font-weight: 600;
+}

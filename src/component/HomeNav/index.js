@@ -1,42 +1,31 @@
 import React, { useRef } from "react";
 import styles from "./homenav.module.css";
-import { useNavigate } from "react-router-dom";
 import {FaBars, FaTimes} from "react-icons/fa";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation, matchPath } from "react-router-dom";
 
 const HomeNav = () => {
-    const navigate = useNavigate();
     const navRef = useRef();
-
+    const { pathname } = useLocation();
     const showNavBar = () => {
         navRef.current.classList.toggle(`${styles.responsiveNav}`)
     }
+
+    const setNavlinkClasses = (paths) =>
+    paths.some((path) => matchPath(path, pathname))
+    ? `${styles.active}`
+    : "";
     
     return(
         <header>
-            <h3>My Portfolio</h3>
+            <NavLink to={"/"}>
+                <h1>Notes App</h1>
+            </NavLink>
             <nav ref={navRef}>
-                <NavLink 
-                // onClick={()=>{ navigate("/home");}}
-                to={"/home"}
-                className={({ isActive }) =>
-                    [
-                    isActive ? `${styles.active}` : "",
-                    ].join(" ")
-                }
-                >
+                <NavLink to={"/home"} className={setNavlinkClasses(["/home", "/note/*"])}>
                     Home
                 </NavLink>
-                <NavLink 
-                // onClick={()=>{navigate("/profile");}}
-                to={"/profile"}
-                className={({ isActive }) =>
-                    [
-                    isActive ? `${styles.active}` : "",
-                    ].join(" ")
-                }
-                >
-                        Developer
+                <NavLink to={"/profile"} className={setNavlinkClasses(["/", "profile"])}> 
+                    Developer
                 </NavLink>
                 <button onClick={showNavBar} className={`${styles.navBtn} ${styles.navClose}`} >
                     <FaTimes/>

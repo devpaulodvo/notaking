@@ -1,0 +1,17 @@
+.container{
+    display: flex;
+    padding: 0em 2em;
+    color: #383633;
+    /* flex-direction: column; */
+}
+.containerz{
+    display: flex;
+    padding: 2em 2em 2em 2em;
+    justify-content: center;
+    /* flex-direction: column; */
+}
+
+.arrowBack{
+    align-self: center;
+    cursor: pointer;
+}
